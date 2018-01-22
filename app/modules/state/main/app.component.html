@@ -1,0 +1,28 @@
+<div [ngClass]="{ 'light-theme' : themeService.theme == 'light-theme',
+ 'dark-theme' : themeService.theme == 'dark-theme',
+'candy-theme' : themeService.theme == 'candy-theme' }">
+  <mat-toolbar layout="column" fxFlex="100" id="actionbarContainer" color="primary" >
+    <button mat-icon-button (click)="toggle()" aria-label="Menu">
+        <i class="material-icons">menu</i>
+    </button>
+    <h3>Fish Washington</h3>
+    <actionbar></actionbar>
+  <div>
+    <section layout="row" fxFlex="100">
+      <mat-sidenav-container fxFlex="100">
+        <sidenav></sidenav>
+        <div>
+            <router-outlet id="ui-view-main" flex></router-outlet>
+            <div style="width:50%;"><span>{{ theme }}</span></div>
+            <button style="margin-left: 250px;" mat-raised-button color="primary" (click)="toggle()">Toggle</button> 
+            <button mat-raised-button color="accent" (click)="setDark()">Dark</button> 
+            <button mat-raised-button color="primary" (click)="setLight()">Light</button> 
+            <button mat-raised-button color="accent" (click)="setCandy()">Candy</button>             
+            <br/>
+            <br/>
+        </div>
+      </mat-sidenav-container>
+    </section>
+  </div>
+  </mat-toolbar>
+</div>

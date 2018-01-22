@@ -1,0 +1,17 @@
+<mat-sidenav class="bds-sidenav" mode="push" #sidenav opened="{{sideNavOpen}}">
+    <mat-list>
+      <div *ngFor="let section of sections">
+        <h4 matSubheader>{{section.name}}</h4>
+        <mat-list-item *ngFor="let subsection of section.subsections" (click)="navigateTo(subsection)">
+          <button mat-icon-button>
+              <mat-icon>
+                  <i class="{{subsection.class}}">{{subsection.icon}}</i>
+              </mat-icon>
+            </button>
+            <p>{{subsection.name}}</p>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+      </div>
+    </mat-list>
+  </mat-sidenav>
+  

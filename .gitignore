@@ -41,3 +41,15 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+#from others
+node_modules
+/server/env/production.js
+/server/env/development.js
+/app/env/env.js
+/app/env
+/dist/assets
+package-lock.json
+/.vscode
+.DS_Store
+

@@ -1,0 +1,25 @@
+<span class="actionbar-fillcenter"></span>
+<div>
+    <button mat-mini-fab aria-label="Open Search">
+        <mat-icon>search</mat-icon>
+    </button>
+    <button mat-mini-fab aria-label="Open Filters">
+        <mat-icon>filter_list</mat-icon>
+    </button>
+</div>    
+<button mat-mini-fab aria-label="More Settings" style="margin-left:6px;" [matMenuTriggerFor]="menu">
+<mat-icon>more_vert</mat-icon>
+</button>
+<mat-menu #menu="matMenu">
+<mat-radio-group class="radio-group" [(ngModel)]="isLight" (change)="toggleTheme();">
+    <div>
+    <span>Select a theme...</span><br/><br/>
+    <mat-radio-button class="radio-button" [value]=true >
+        Light
+    </mat-radio-button>
+    <mat-radio-button class="radio-button" [value]=false >
+        Dark
+    </mat-radio-button>
+    </div>
+    </mat-radio-group>
+</mat-menu>
