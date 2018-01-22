@@ -1,4 +1,5 @@
-<mat-sidenav class="bds-sidenav" mode="push" #sidenav opened="{{sideNavOpen}}">
+<mat-sidenav-container fxFlex="100">
+  <mat-sidenav class="bds-sidenav" mode="push" #sidenav opened="{{sideNavOpen}}">
     <mat-list>
       <div *ngFor="let section of sections">
         <h4 matSubheader>{{section.name}}</h4>
@@ -14,4 +15,5 @@
       </div>
     </mat-list>
   </mat-sidenav>
-  
+  <router-outlet id="ui-view-main" flex></router-outlet>
+</mat-sidenav-container>
