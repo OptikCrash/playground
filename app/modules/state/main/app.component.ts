@@ -1,5 +1,5 @@
 import { Component, ViewChild, OnInit } from '@angular/core';
-import { ThemeService } from './../../services/themeService';
+import { ThemeService } from './../../services/theme.service';
 import { SideNav } from './../../components/sidenav/sidenav.component';
 import { ActionBar } from './../../components/actionbar/actionbar.component';
 

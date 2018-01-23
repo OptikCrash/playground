@@ -4,7 +4,7 @@ import { Subject } from "rxjs/Subject";
 @Injectable()
 export class ThemeService {
     public themeList: string[] = ['light-theme', 'dark-theme', 'candy-theme'];
-    public theme: string = 'candy-theme';
+    public theme: string = 'light-theme';
     private subject: Subject<string> = new Subject<string>();
 
     constructor() {
@@ -17,6 +17,6 @@ export class ThemeService {
         return this.subject.asObservable();
     }
     public setTheme(theme?: string) {
-        this.theme = (theme === null) ? 'candy-theme' : theme;
+        this.theme = (theme === null) ? 'light-theme' : theme;
     }
 }

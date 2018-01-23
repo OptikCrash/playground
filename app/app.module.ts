@@ -17,7 +17,7 @@ import { AppComponent } from './../app/modules/state/main/app.component';
 import { ActionBar } from './modules/components/actionbar/actionbar.component';
 import { SideNav } from './modules/components/sidenav/sidenav.component';
 
-import { ThemeService } from './modules/services/themeService';
+import { ThemeService } from './modules/services/theme.service';
 
 @NgModule({
   declarations: [

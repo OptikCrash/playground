@@ -15,12 +15,15 @@ $candy-primary: mat-palette($mat-pink);
 $candy-accent: mat-palette($mat-purple);
 $candy-warn: mat-palette($mat-yellow);
 $candy-theme: mat-light-theme($candy-primary, $candy-accent, $candy-warn);
-@include angular-material-theme($candy-theme);
+@include angular-material-theme($light-theme);
 
 .light-theme {
     @include angular-material-theme($light-theme);
 }
 .dark-theme {
     @include angular-material-theme($dark-theme);
+}
+.candy-theme {
+    @include angular-material-theme($candy-theme);
 }
 
