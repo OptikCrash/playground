@@ -6,16 +6,17 @@ import { ActionBar } from './../../components/actionbar/actionbar.component';
 @Component({
   selector: 'main',
   templateUrl: './app.component.html',
-  styleUrls: ['./../../../styles/app.component.scss']
+  styles: ['./../../../styles/app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'app';
 
   @ViewChild(SideNav)
   public sideNav: SideNav;
   public actionBar: ActionBar;
   
-  constructor(private themeService: ThemeService) { }
+  constructor( private themeService: ThemeService ) {  
+    
+  }
   ngOnInit() {
     
   }

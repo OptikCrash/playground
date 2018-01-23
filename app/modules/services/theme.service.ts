@@ -17,6 +17,6 @@ export class ThemeService {
         return this.subject.asObservable();
     }
     public setTheme(theme?: string) {
-        this.theme = (theme === null) ? 'light-theme' : theme;
+        document.body.className = (theme === undefined) ? 'light-theme' : theme;
     }
 }

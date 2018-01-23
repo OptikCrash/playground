@@ -10,6 +10,7 @@ import { MatExpansionModule, MatToolbarModule, MatButtonModule,
   MatSidenavModule, MatMenuModule, MatIconModule, MatListModule, MatInputModule, 
   MatRadioModule } from '@angular/material';
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { HomeModule } from './modules/state/home/home.module';
 
@@ -18,6 +19,7 @@ import { ActionBar } from './modules/components/actionbar/actionbar.component';
 import { SideNav } from './modules/components/sidenav/sidenav.component';
 
 import { ThemeService } from './modules/services/theme.service';
+import { SharedService } from './modules/services/share-service';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,8 @@ import { ThemeService } from './modules/services/theme.service';
     HomeModule
   ],
   providers: [
-    ThemeService
+    ThemeService,
+    SharedService
   ],
   bootstrap: [AppComponent]
 })

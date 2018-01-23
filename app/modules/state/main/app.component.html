@@ -1,8 +1,6 @@
-<div style="flex-direction: column;" [ngClass]="{ 'light-theme' : themeService.theme == 'light-theme' || themeService.theme == undefined, 'dark-theme' : themeService.theme == 'dark-theme', 'candy-theme' : themeService.theme == 'candy-theme' }">
 <actionbar (toggleSidenavEvent)="toggle()" (setTheme)="setTheme($event)"></actionbar>
-  <div layout="column" fxFlex="100">
-    <section layout="row" fxFlex="100">
-      <sidenav></sidenav>
-    </section>
-  </div>
+<div layout="column" fxFlex="100">
+  <section layout="row" fxFlex="100">
+    <sidenav></sidenav>
+  </section>
 </div>

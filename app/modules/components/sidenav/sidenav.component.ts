@@ -1,14 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { includes } from 'lodash';
 
 @Component({
   selector: 'sidenav',
   templateUrl: 'sidenav.html',
-  styleUrls: ['./../../../styles/sidenav.scss'],
+  styles: ['./../../../styles/sidenav.scss']
 })
 export class SideNav implements OnInit {
-    constructor(private router: Router) { }
+    constructor(private router: Router) {
+    }
     public sideNavOpen: boolean = false;
 
     ngOnInit(): void {
@@ -60,4 +61,5 @@ export class SideNav implements OnInit {
           window.location.assign(subsection.link);
       }
   }
+
 }

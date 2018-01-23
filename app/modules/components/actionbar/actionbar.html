@@ -1,8 +1,8 @@
-<mat-toolbar layout="row" fxFlex="100" id="actionbarContainer" color="primary" >
+<mat-toolbar layout="row" fxFlex="100" id="actionbarContainer" class="mat-primary" >
     <button mat-icon-button (click)="toggleNav()" aria-label="Menu">
         <i class="material-icons">menu</i>
     </button>
-    <h3>The Playground!</h3>
+    <h3>{{ title }}</h3>
     <span class="actionbar-fillcenter"></span>
     <div>
         <button mat-mini-fab aria-label="Open Search">
@@ -16,11 +16,9 @@
         <mat-icon>more_vert</mat-icon>
     </button>
     <mat-menu #menu="matMenu">
-        <div layout="column" class="themeSelector">
-            <h4>Select a theme...</h4>
-            <div *ngFor="let theme of menuThemes">
-                <button mat-button (click)="changeThemeTo(theme)">{{ theme }}</button>
-            </div>
-        </div>
+        <button mat-menu-item [matMenuTriggerFor]="themes">Select a theme...</button>
+    </mat-menu>
+    <mat-menu #themes="matMenu">
+        <button mat-menu-item *ngFor="let theme of menuThemes" (click)="changeThemeTo(theme)">{{ theme }}</button>
     </mat-menu>
 </mat-toolbar> 
