@@ -12,7 +12,7 @@ import { SharedService } from './../../services/share-service';
 })
 
 export class HomeComponent {
-  title = 'the jungle';
+  title = 'Home';
   constructor(private themeService: ThemeService, private sharedService: SharedService) {
     this.sharedService.emitChange(this.title);
   }
