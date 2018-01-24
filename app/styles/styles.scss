@@ -21,4 +21,16 @@ i.bds-instagram {
 }
 i.bds-g-plus {
 	color:#d34836;
+} 
+#bg-img {
+	background: no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+#bg-img mat-card {
+	margin-left:15%;
+	margin-right:15%;
+	margin-top:64px;
 }

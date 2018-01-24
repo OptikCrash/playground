@@ -5,7 +5,7 @@ import { SharedService } from './../../services/share-service';
 @Component({
     selector: 'actionbar',
     templateUrl: 'actionbar.html',
-    styles: ['./../../../styles/actionbar.scss']
+    styleUrls: ['./../../../styles/actionbar.scss']
   })
   export class ActionBar {
     menuThemes: string[];

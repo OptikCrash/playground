@@ -8,7 +8,7 @@ import { HttpModule } from '@angular/http';
 import { FlexLayoutModule} from '@angular/flex-layout';
 import { MatExpansionModule, MatToolbarModule, MatButtonModule, 
   MatSidenavModule, MatMenuModule, MatIconModule, MatListModule, MatInputModule, 
-  MatRadioModule } from '@angular/material';
+  MatRadioModule, MatCardModule } from '@angular/material';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -35,7 +35,7 @@ import { SharedService } from './modules/services/share-service';
     HttpModule,
     MatExpansionModule, MatToolbarModule, MatButtonModule, 
     MatSidenavModule, MatMenuModule, MatIconModule, MatListModule, 
-    MatInputModule, MatRadioModule,
+    MatInputModule, MatRadioModule, MatCardModule,
     FlexLayoutModule,
     HomeModule
   ],
