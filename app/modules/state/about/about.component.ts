@@ -4,13 +4,13 @@ import { Router } from '@angular/router';
 import { SharedService } from './../../services/share-service';
 
 @Component({
-  selector: 'home-component',
-  templateUrl: 'home.component.html',
+  selector: 'about-component',
+  templateUrl: 'about.component.html',
   styles: ['./../../../styles/home.scss']
 })
 
-export class HomeComponent {
-  title = 'Home';
+export class AboutComponent {
+  title = 'About Us';
   constructor(private themeService: ThemeService, private sharedService: SharedService) {
     this.sharedService.emitChange(this.title);
   }

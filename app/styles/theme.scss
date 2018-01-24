@@ -22,8 +22,8 @@ $candy-theme: mat-light-theme($candy-primary, $candy-accent, $candy-warn);
 .light-theme {
     @include angular-material-theme($light-theme);
     .mat-menu-panel {
-        color: mat-color($light-accent, darker);
-        border: 2px solid mat-color($light-accent);
+        border-radius:10px;
+        border: 1px solid mat-color($light-accent);
         background-color: mat-color($light-primary, lighter);
     }
 }
@@ -34,19 +34,19 @@ $candy-theme: mat-light-theme($candy-primary, $candy-accent, $candy-warn);
         color: mat-color($dark-accent);
     }
     .mat-menu-panel {
-        color: mat-color($dark-accent, lighter);
-        border: 2px solid mat-color($dark-accent);
+        border-radius:10px;
+        border: 1px solid mat-color($dark-accent);
         background-color: mat-color($dark-primary, darker);
     }
 }
 .candy-theme {
     @include angular-material-theme($candy-theme);
     #actionbarContainer {
-        color: mat-color($candy-accent);
+        color: mat-color($candy-accent, lighter);
     }
     .mat-menu-panel {
-        color: mat-color($candy-accent, darker);
-        border: 2px solid mat-color($candy-accent);
+        border-radius:10px;
+        border: 1px solid mat-color($candy-accent);
         background-color: mat-color($candy-primary, lighter);
     }
 }

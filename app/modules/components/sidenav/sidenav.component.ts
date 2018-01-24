@@ -5,7 +5,7 @@ import { includes } from 'lodash';
 @Component({
   selector: 'sidenav',
   templateUrl: 'sidenav.html',
-  styleUrls: ['./../../../styles/sidenav.scss']
+  styles: ['./../../../styles/sidenav.scss']
 })
 export class SideNav implements OnInit {
     constructor(private router: Router) {
@@ -23,6 +23,11 @@ export class SideNav implements OnInit {
       state: 'home',
       class: 'material-icons',
       icon: 'home'
+    },{
+      name: 'About',
+      state: 'about',
+      class: 'material-icons',
+      icon: 'pages'
     }]
   }, {
     name: 'Connect:',

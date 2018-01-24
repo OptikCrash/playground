@@ -23,6 +23,8 @@ i.bds-g-plus {
 	color:#d34836;
 } 
 #bg-img {
+    padding-top:78px;
+    padding-bottom:14px;
 	background: no-repeat center center fixed; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -30,14 +32,11 @@ i.bds-g-plus {
 	background-size: cover;
 }
 #bg-img mat-card {
-	margin-left:15%;
-	margin-right:15%;
-	margin-top:64px;
-    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 2s; /* Firefox < 16 */
-        -ms-animation: fadein 2s; /* Internet Explorer */
-         -o-animation: fadein 2s; /* Opera < 12.1 */
-            animation: fadein 2s;
+    -webkit-animation: fadein 5s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 5s; /* Firefox < 16 */
+        -ms-animation: fadein 5s; /* Internet Explorer */
+         -o-animation: fadein 5s; /* Opera < 12.1 */
+            animation: fadein 5s;
 }
 
 @keyframes fadein {
@@ -68,3 +67,19 @@ i.bds-g-plus {
     from { opacity: 0; }
     to   { opacity: 1; }
 }
+#actionbarContainer {
+    position: fixed;
+    top: 0;
+    z-index: 8;
+}
+.bds-sidenav {
+    margin-top:64px;
+    padding-left: 7px;
+    padding-right: 14px;
+}
+.bds-sidenav mat-divider {
+    display: flex;
+    padding: 20px;
+    margin-bottom:10px;
+    margin-top:10px;
+} 

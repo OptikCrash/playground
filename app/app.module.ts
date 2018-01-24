@@ -13,6 +13,7 @@ import { MatExpansionModule, MatToolbarModule, MatButtonModule,
 
 import { AppRoutingModule } from './app-routing.module';
 import { HomeModule } from './modules/state/home/home.module';
+import { AboutModule } from './modules/state/about/about.module';
 
 import { AppComponent } from './../app/modules/state/main/app.component';
 import { ActionBar } from './modules/components/actionbar/actionbar.component';
@@ -37,7 +38,8 @@ import { SharedService } from './modules/services/share-service';
     MatSidenavModule, MatMenuModule, MatIconModule, MatListModule, 
     MatInputModule, MatRadioModule, MatCardModule,
     FlexLayoutModule,
-    HomeModule
+    HomeModule,
+    AboutModule
   ],
   providers: [
     ThemeService,
