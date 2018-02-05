@@ -3,7 +3,7 @@ import { Subject } from "rxjs/Subject";
 
 @Injectable()
 export class ThemeService {
-    public themeList: string[] = ['light-theme', 'dark-theme', 'candy-theme'];
+    public themeList: string[] = ['light-theme', 'dark-theme', 'candy-theme', 'hunt-theme'];
     public theme: string = 'light-theme';
     private subject: Subject<string> = new Subject<string>();
 

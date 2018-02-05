@@ -3,18 +3,24 @@
 
 $light-primary: mat-palette($mat-blue, 800, 50, 900);
 $light-accent: mat-palette($mat-light-blue, 600, A200, A700);
-$light-warn: mat-palette($mat-amber, 600, A400, A700);
+$light-warn: mat-palette($mat-yellow, 600, A400, A700);
 $light-theme: mat-light-theme($light-primary, $light-accent, $light-warn);
 
 
 $dark-primary: mat-palette($mat-blue-grey);
 $dark-accent:  mat-palette($mat-blue-grey, A200, A100, A400);
-$dark-warn:  mat-palette($mat-red, 600, A400, A700);
+$dark-warn:  mat-palette($mat-deep-orange, 600, A400, A700);
 $dark-theme: mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
+
+
+$hunt-primary: mat-palette($mat-brown);
+$hunt-accent:  mat-palette($mat-teal);
+$hunt-warn:  mat-palette($mat-orange);
+$hunt-theme: mat-dark-theme($hunt-primary, $hunt-accent, $hunt-warn);
 
 $candy-primary: mat-palette($mat-pink);
 $candy-accent: mat-palette($mat-purple);
-$candy-warn: mat-palette($mat-yellow);
+$candy-warn: mat-palette($mat-red);
 $candy-theme: mat-light-theme($candy-primary, $candy-accent, $candy-warn);
 
 @include angular-material-theme($light-theme);
@@ -25,6 +31,9 @@ $candy-theme: mat-light-theme($candy-primary, $candy-accent, $candy-warn);
         border-radius:10px;
         border: 1px solid mat-color($light-accent);
         background-color: mat-color($light-primary, lighter);
+    }
+    .footer{
+        background-color:aliceblue;
     }
 }
 .dark-theme {
@@ -38,6 +47,9 @@ $candy-theme: mat-light-theme($candy-primary, $candy-accent, $candy-warn);
         border: 1px solid mat-color($dark-accent);
         background-color: mat-color($dark-primary, darker);
     }
+    .footer{
+        background-color:darkgrey;
+    }
 }
 .candy-theme {
     @include angular-material-theme($candy-theme);
@@ -49,4 +61,15 @@ $candy-theme: mat-light-theme($candy-primary, $candy-accent, $candy-warn);
         border: 1px solid mat-color($candy-accent);
         background-color: mat-color($candy-primary, lighter);
     }
+    .footer{
+        background-color:lightgray;
+    }
 }
+
+.hunt-theme {
+    @include angular-material-theme($hunt-theme);
+    .footer{
+        background-color:olive;
+    }
+}
+

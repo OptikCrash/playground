@@ -1,0 +1,76 @@
+<div>
+    <div class="container" fxLayout fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap="14px" fxLayoutGap.xs="0" style="margin-top:14px;">
+        <div class="footer" id="pamphlet" fxFlex="35%;" style="border: 1px solid darkblue;border-radius:10px;padding-left:14px;padding-right:14px;padding-top:14px;">
+            <div>
+                <div class="left">
+                    <img src="https://wdfw.wa.gov/includes/graphics/pamphlet_covers/2017_fishing_pamphlet.jpg" alt="2017-2018 Fishing in Washington Rules Pamphlet Cover">
+                </div>
+                <div class="right">
+                    <h2>2017-2018 Sport Fishing<br>Regulation Pamphlet</h2>
+                    <mat-list>
+                        <mat-list-item>
+                            <button mat-button color="primary" routerLink="https://wdfw.wa.gov/publications/01914/wdfw01914.pdf">Download 2017-18 Rule Pamphlet</button>
+                        </mat-list-item>
+                        <p style="margin-left:32px;margin-top:-10px;font-size:small;"><i>(rules effective July 1, 2017 - June 30, 2018)</i></p>
+                        <mat-list-item>
+                            <button mat-button color="primary" routerLink="https://wdfw.wa.gov/publications/01914/2017_fishing_regulation_errata.pdf">Corrections to the 2017 Rule Pamphlet</button>
+                        </mat-list-item>
+                        <p style="margin-left:32px;margin-top:-10px;font-size:small;"><i>(last updated June 28, 2017)</i></p>
+                        <mat-list-item>
+                            <button mat-button color="primary" routerLink="https://wdfw.wa.gov/fishing/rulechanges/">Search emergency rule updates</button>
+                        </mat-list-item>
+                    </mat-list>
+                </div>
+            </div>
+        </div>
+        <div fxFlex="50%;" layout="column" style="border: 1px solid orange;border-radius:10px;padding:14px;background-color:goldenrod;">
+            <div>
+                <h3>Fishing Rule Updates</h3>
+                <span class="actionbar-fillcenter"></span>
+            </div> 
+            <mat-table #table [dataSource]="dataSource">
+
+                <!-- Position Column -->
+                <ng-container matColumnDef="title">
+                    <mat-header-cell *matHeaderCellDef>RSS Feed </mat-header-cell>
+                    <mat-icon mat-list-item-icon>face</mat-icon>
+                    <mat-cell *matCellDef="let element">
+                        <button mat-button color="primary" routerLink="{{element.url}}">{{element.title}}</button>
+                    </mat-cell>
+                </ng-container>
+
+                <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+            </mat-table>
+            <mat-list>
+                <mat-list-item>
+                    <button mat-raised-button color="accent"  routerLink="https://wdfw.wa.gov/rss.html"><mat-icon mat-list-icom>rss_feed</mat-icon>Subscribe</button>
+                </mat-list-item>
+            </mat-list>
+        </div>
+    </div>
+
+    <div style="padding:14px;">
+        <mat-card>
+            <mat-card-header>
+                <div mat-card-avatar style="background-image:url('https://wdfw.wa.gov/fishing/graphics/feature_salmon_fishing.jpg');background-size:cover;"></div>
+                <mat-card-title>RECREATIONAL SALMON FISHING</mat-card-title>
+                <mat-card-subtitle>When and Where to Fish for Salmon</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                <button mat-button color="accent" routerLink="https://wdfw.wa.gov/fishing/salmon/whenwhere/"></button>
+                <p>Figuring out when and where to fish for salmon is one of the most asked questions for beginning salmon anglers. You will find many useful tools on this website to help you decide when and where to go.</p>
+                <mat-list>
+                    <mat-list-item>
+                        <mat-icon mat-list-icon class="fa fa-genderless"></mat-icon>
+                        <button mat-button color="accent" routerLink="https://wdfw.wa.gov/fishing/salmon/identification.html">Know the 5 species of salmon and how to identify them</button>
+                    </mat-list-item>
+                    <mat-list-item>
+                        <mat-icon mat-list-icon class="fa fa-genderless"></mat-icon>
+                        <button mat-button color="accent" routerLink="https://wdfw.wa.gov/fishing/salmon/seasons.html">How salmon seasons are set</button>
+                    </mat-list-item>
+                </mat-list>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

@@ -1,22 +1,39 @@
 <mat-sidenav-container fxFlex="100">
-  <mat-sidenav class="bds-sidenav" mode="push" #sidenav opened="{{sideNavOpen}}">
+  <mat-sidenav class="bds-sidenav" mode="push" #sidenav opened="{{sideNavOpen}}" style="max-width:400px;">
+    
     <mat-list>
       <div *ngFor="let section of sections">
         <h4 matSubheader>{{section.name}}</h4>
-        <mat-list-item *ngFor="let subsection of section.subsections" (click)="navigateTo(subsection)">
-          <button mat-icon-button>
-              <mat-icon>
-                  <i class="{{subsection.class}}">{{subsection.icon}}</i>
-              </mat-icon>
-            </button>
-            <p>{{subsection.name}}</p>
-        </mat-list-item>
+        <div *ngFor="let subsection of section.subsections">
+          <mat-accordion *ngIf="subsection.states">
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>  
+                  <mat-list-item>
+                      <mat-icon mat-list-icon class="{{subsection.class}}">{{subsection.icon}}</mat-icon>
+                      <button mat-button color="primary" (click)="navigateTo(subsection)">{{subsection.name}}</button>
+                    </mat-list-item>
+                </mat-panel-title>
+                <mat-panel-description>
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+              <mat-list-item *ngFor="let sub of subsection.states;" (click)="navigateTo(subsection)">
+                  <mat-icon mat-list-icon class="{{sub.class}}">{{sub.icon}}</mat-icon>
+                  <button mat-button color="accent" (click)="navigateTo(sub)">{{sub.name}}</button>
+                </mat-list-item>
+            </mat-expansion-panel>
+          </mat-accordion>
+          <mat-list-item *ngIf="!subsection.states" style="padding-left:24px;">
+            <mat-icon mat-list-icon class="{{subsection.class}}">{{subsection.icon}}</mat-icon>
+            <button mat-button color="primary" (click)="navigateTo(subsection)">{{subsection.name}}</button>
+          </mat-list-item>
+        </div>
         <mat-divider></mat-divider>
       </div>
     </mat-list>
   </mat-sidenav>
   <section id="bg-img">
-    <mat-card style="margin-left:15%;margin-right:15%;">
+    <mat-card style="margin-left:15%;margin-right:15%;min-height:89vh;">
       <router-outlet id="ui-view-main" flex ></router-outlet>
     </mat-card>
   </section>

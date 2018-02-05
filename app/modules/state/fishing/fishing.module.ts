@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { HomeComponent } from './home.component';
+import { FishingComponent } from './fishing.component';
 import { RouterModule } from '@angular/router';
-import { MatToolbarModule, MatButtonModule, MatIconModule, MatCardModule, MatDialogModule, MatDividerModule, MatListModule, MatGridListModule } from '@angular/material'
+import { MatToolbarModule, MatButtonModule, MatIconModule, MatCardModule, MatDialogModule, MatDividerModule, MatListModule, MatGridListModule, MatTableModule } from '@angular/material'
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { FlexLayoutModule} from '@angular/flex-layout';
 
@@ -21,12 +21,13 @@ import { FlexLayoutModule} from '@angular/flex-layout';
     MatSnackBarModule,
     MatListModule,
     MatGridListModule,
+    MatTableModule,
     FlexLayoutModule
   ],
   declarations: [
-    HomeComponent
+    FishingComponent
   ],
   providers: [
   ]
 })
-export class HomeModule {}
+export class FishingModule {}

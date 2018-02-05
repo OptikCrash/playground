@@ -7,21 +7,48 @@ body {
 .actionbar-fillcenter {
 	flex: 1 1 auto;
 }
-i.bds-facebook {
+.bds-facebook {
+    margin-right: 14px;
+    transform: scale(2,2);
 	color: #3b5998;
 }
-i.bds-youtube {
+.bds-youtube {
+    margin-right: 14px;
+    transform: scale(2,2);
 	color:#bb0000;
 }
-i.bds-twitter {
+.bds-twitter {
+    margin-right: 14px;
+    transform: scale(2,2);
 	color:#55acee;
 }
-i.bds-instagram {
+.bds-instagram {
+    margin-right: 14px;
+    transform: scale(2,2);
 	color:#e95950;
 }
-i.bds-g-plus {
+.bds-g-plus {
+    margin-right: 14px;
+    transform: scale(2,2);
 	color:#d34836;
 } 
+.left {
+    float:left;
+    margin-right:14px;
+}
+.right {
+    overflow: hidden;
+}
+.more-btn {
+    overflow: hidden;
+}
+.more-btn button {
+    float:right;
+}
+.grid-card {
+    width:calc(100% - 70px);
+    height:calc(100% - 70px);
+}
 #bg-img {
     padding-top:78px;
     padding-bottom:14px;
@@ -83,3 +110,13 @@ i.bds-g-plus {
     margin-bottom:10px;
     margin-top:10px;
 } 
+/* Structure */
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  .mat-table {
+    overflow: auto;
+    max-height: 500px;
+  }

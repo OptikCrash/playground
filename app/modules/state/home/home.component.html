@@ -1,20 +1,199 @@
 <div>  
   <div style="text-align:center">
-    <h1>
-      Welcome to {{ title }}!
-    </h1>
-    <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+    <img mat-card-image width="300" alt="WDFW Logo" src="http://wdfw.wa.gov/includes/graphics/banner/rotate.php">
   </div>
-  <h2>Here are some links to help you start: </h2>
-  <ul>
-    <li>
+
+<div class="container" fxLayout fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap="14px" fxLayoutGap.xs="0" style="margin-top:14px;">
+
+      <mat-card fxFlex="33%">
+        <mat-card-title>
+          <button mat-button color="primary" routerLink="https://wdfw.wa.gov/fishing/shellfish/razorclams/">RECREATIONAL RAZOR CLAMMING</button>
+        </mat-card-title>
+        <mat-card-content>
+          <div class="left">
+            <img src="https://wdfw.wa.gov/includes/graphics/features/feature_razorclam.jpg" alt="Razor clams on the beach with a clam shovel in the background."/>
+          </div>
+          <div class="right">
+            <h4>WDFW approves 7 days of razor clam digging</h4>
+            <p>Seven days of razor clam digging will get underway beginning Sunday, Jan. 28, on various coastal beaches.</p>
+          </div>
+        </mat-card-content>
+        <mat-card-actions class="more-btn">
+          <button mat-button color="accent" routerLink="https://wdfw.wa.gov/fishing/shellfish/razorclams/current.html">Learn more &gt;&gt;</button>
+        </mat-card-actions>
+      </mat-card> 
+
+      <mat-card fxFlex="33%;">
+          <mat-card-title>
+            <button mat-button color="primary" routerLink="https://wdfw.wa.gov/fishing/washington/mobile_app.html">MOBILE FISHING APP</button>
+          </mat-card-title>
+          <mat-card-content>
+            <div class="left">
+              <img src="https://wdfw.wa.gov/includes/graphics/features/feature_fish_washington_app.png" alt="Image of a person holding a smart phone with the Fish Washington logo on the screen."/>
+            </div>
+            <div class="right">
+              <h4>WDFW seeks beta testers for new mobile fishing app</h4>
+              <p>We are seeking  your help in beta testing our new mobile fishing  application prior to the app's official release in April 2018.</p>
+            </div>
+          </mat-card-content>
+          <mat-card-actions class="more-btn">
+            <button mat-button color="accent" routerLink="https://wdfw.wa.gov/fishing/washington/mobile_app.html">Learn more &gt;&gt;</button>
+          </mat-card-actions>
+        </mat-card>
+
+      <mat-card fxFlex="33%">
+          <mat-card-title>
+            <button mat-button color="primary" routerLink="https://wdfw.wa.gov/fishing/washington/">FISH WASHINGTON</button>
+          </mat-card-title>
+          <mat-card-content>
+            <div class="left">
+              <img src="https://wdfw.wa.gov/includes/graphics/features/fish_washington_125px.jpg" alt="Fish Washington logo"/>
+            </div>
+            <div class="right">
+              <h4>Fish Washington:</h4>
+              <p>One stop shopping to learn where, when and how to go fishing in Washington</p>
+              <mat-list>
+                  <mat-list-item>
+                    <button mat-button color="accent" routerLink="http://wdfw.wa.gov/fishing/washington/fishing101/">Fishing 101</button>
+                  </mat-list-item>
+                  <mat-list-item>
+                      <button mat-button color="accent" routerLink="https://wdfw.wa.gov/fishing/regulations/">Fishing Seasons &amp; Rules</button>
+                  </mat-list-item>
+                  <mat-list-item>
+                      <button mat-button color="accent" routerLink="https://wdfw.wa.gov/fishing/plants/weekly/">Trout Stocking Reports</button>
+                  </mat-list-item>
+              </mat-list>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <div class="container" fxLayout fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap="14px" fxLayoutGap.xs="0" style="margin-top:14px;">
+
+      <mat-card fxFlex="67%;">
+          <mat-card-title>
+            <button mat-button color="primary" routerLink="http://wdfw.wa.gov/news">LATEST NEWS</button>
+          </mat-card-title>
+          <mat-card-content>
+            <div class="right">
+              <mat-list>
+                <mat-list-item>
+                  <mat-icon mat-list-icon>fiber_manual_record</mat-icon>
+                  <button mat-button color="accent" routerLink="http://wdfw.wa.gov/news/feb0218b">Joe Stohr named acting director  of Fish and Wildlife</button>
+                </mat-list-item>
+                <mat-list-item>
+                  <mat-icon mat-list-icon>fiber_manual_record</mat-icon>
+                  <button mat-button color="accent" routerLink="http://wdfw.wa.gov/news">Commission will hear public comments on  Grays Harbor, Willapa Bay salmon fisheries</button>
+                </mat-list-item>
+                <mat-list-item>
+                  <mat-icon mat-list-icon>fiber_manual_record</mat-icon>
+                  <button mat-button color="accent" routerLink="http://wdfw.wa.gov/news/jan2918b">Helicopter crash in eastern Washington kills 1,  injures 2 during deer research</button>
+                </mat-list-item>
+                <mat-list-item>
+                  <mat-icon mat-list-icon>fiber_manual_record</mat-icon>
+                  <button mat-button color="accent" routerLink="http://wdfw.wa.gov/news/jan3018a">State investigation finds Cooke's negligence was  primary cause of Atlantic salmon net pen collapse</button>
+                </mat-list-item>
+                <mat-list-item>
+                  <mat-icon mat-list-icon>fiber_manual_record</mat-icon>
+                  <button mat-button color="accent" routerLink="http://wdfw.wa.gov/news/jan2918a">Master Hunter Permit Program will accept  applications through Feb. 15</button>
+                </mat-list-item>
+                <mat-list-item>
+                  <mat-icon mat-list-icon>fiber_manual_record</mat-icon>
+                  <button mat-button color="accent" routerLink="http://wdfw.wa.gov/news/jan2518a">Public survey available on Puget Sound  recreational fisheries enhancement program</button>
+                </mat-list-item>
+              </mat-list>
+            </div>
+          </mat-card-content>
+          <mat-card-actions class="more-btn">
+            <button mat-button color="accent" routerLink="">More news &gt;&gt;</button>
+          </mat-card-actions>
+        </mat-card>
+      <mat-card fxFlex="33%;">
+          <mat-card-title>
+            <button mat-button color="primary" routerLink="https://wdfw.wa.gov/conservation/health/">WILDLIFE HEALTH</button>
+          </mat-card-title>
+          <mat-card-content>
+            <div class="left">
+              <img src="https://wdfw.wa.gov/includes/graphics/features/feature_wns.jpg" alt="Photo of several bats hanging from cave wall with White Nose Syndrome"/>
+            </div>
+            <div class="right">
+              <h4>White-nose Syndrome in Bats</h4>
+              <p>A devastating bat disease called White-nose Syndrome is now in Washington. Help us monitor our bat populations by reporting sick or dead bats, or groups of bats.</p>
+            </div>
+          </mat-card-content>
+          <mat-card-actions class="more-btn">
+            <button mat-button color="accent" routerLink="https://wdfw.wa.gov/conservation/health/wns/">Learn more &gt;&gt;</button>
+          </mat-card-actions>
+        </mat-card>
+        </div>
+        <div class="container" fxLayout fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap="14px" fxLayoutGap.xs="0" style="margin-top:14px;">
+        <mat-card fxFlex="33%;">
+            <mat-card-title>
+              <button mat-button color="primary" routerLink="https://wdfw.wa.gov/sharephotos/">SHARE YOUR PHOTOS!</button>
+            </mat-card-title>
+            <mat-card-content>
+              <div class="left">
+                <img src="https://wdfw.wa.gov/sharephotos/features/rotate.php" alt="Share Your Photos!"/>
+              </div>
+              <div class="right">
+                <p>Share photos of your outdoors adventures with us! Use our online form to submit photos of hunting, fishing, wildlife watching, and outdoor recreation in Washington. Photos from the public may be featured on WDFW social media including Facebook and Instagram.</p>
+              </div>
+            </mat-card-content>
+            <mat-card-actions class="more-btn">
+              <button mat-button color="accent" routerLink="https://wdfw.wa.gov/sharephotos/">Share your photos now! &gt;&gt;</button>
+            </mat-card-actions>
+          </mat-card>
+
+        <mat-card fxFlex="33%">
+          <mat-card-title>
+            <button mat-button color="primary" routerLink="https://wdfw.wa.gov/accessibility/cover_contest.html">ROAD ACCESS ENTRY BOOKLET COVER CONTEST</button>
+          </mat-card-title>
+          <mat-card-content>
+            <div class="left">
+              <img src="https://wdfw.wa.gov/accessibility/graphics/feature_2014_road_access_cover.jpg" alt="Image of a watercolor painting of a hand holding a brush painting flowers and grass."/>
+            </div>
+            <div class="right">
+              <p>Want to see your artwork on the cover of WDFW's Road Access Entry booklet? Use our online form to submit your work -- created in oils, watercolor, charcoal, digital, or other mediums -- depicting big game in natural settings. Entries close March 1.</p>
+            </div>
+          </mat-card-content>
+          <mat-card-actions class="more-btn">
+            <button mat-button color="accent" routerLink="https://wdfw.wa.gov/accessibility/cover_contest.html">Learn more &gt;&gt;</button>
+          </mat-card-actions>
+        </mat-card>
+      
+          <mat-card fxFlex="33%;">
+            <mat-card-title>
+              <button mat-button color="primary" routerLink="/about/">ABOUT WDFW</button>
+            </mat-card-title>
+            <mat-card-content>
+              <div class="left">
+                <img src="https://wdfw.wa.gov/includes/graphics/features/feature_wildlife_weekly.jpg" alt="Photo of WDFW staff working in the field"/>
+              </div>
+              <div class="right">
+                <h4>Wildlife Program Weekly Activity Reports</h4>
+                <p>Wildlife Program reports summarize the current activities of our field and headquarters staff around the state.</p>
+              </div>
+            </mat-card-content>
+            <mat-card-actions class="more-btn">
+              <button mat-button color="accent" routerLink="https://wdfw.wa.gov/about/wildlife_weekly/">Learn more &gt;&gt;</button>
+            </mat-card-actions>
+          </mat-card>
+    </div>
+
+  <mat-card-footer>
+    <button mat-button routerLink="http://access.wa.gov" style="padding:14px;left:50%;"><img src="https://wdfw.wa.gov/includes/graphics/AWlogo3_150px.gif" alt="Access Washington - Official State Government Website"></button>
+  </mat-card-footer>
+  <!-- <h2>Here are some links to help you start: </h2>
+  <mat-list>
+    <mat-list-item>
       <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-    </li>
-    <li>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item>
       <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-    </li>
-    <li>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item>
       <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-    </li>
-  </ul>
+    </mat-list-item>
+  </mat-list> -->
 </div>      

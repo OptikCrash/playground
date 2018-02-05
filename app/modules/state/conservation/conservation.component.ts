@@ -1,17 +1,16 @@
 import { Component, OnInit, ViewContainerRef } from '@angular/core';
-import { MatDivider } from '@angular/material';
 import { ThemeService } from './../../services/theme.service';
 import { Router } from '@angular/router';
 import { SharedService } from './../../services/share-service';
 
 @Component({
-  selector: 'about-component',
-  templateUrl: 'about.component.html',
-  styles: ['./../../../styles/home.scss']
+  selector: 'conservation-component',
+  templateUrl: 'conservation.component.html',
+  styles: ['./../../../styles/conservation.scss']
 })
 
-export class AboutComponent {
-  title = 'About Us';
+export class ConservationComponent {
+  title = 'Conservation';
   constructor(private themeService: ThemeService, private sharedService: SharedService) {
     this.sharedService.emitChange(this.title);
   }
